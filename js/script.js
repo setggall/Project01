@@ -10,36 +10,58 @@ document.getElementById('loadQuote').addEventListener("click", bg, false);
 var quotes = [
   { quote: "The secret of getting ahead is getting started.",
   source: "Mark Twain",
+  citation: "He probably did not even say it",
+  year: "1886",
   tag: 'motivational'},
   {quote: "Do you mind if I sit back a little? Because your breath is very bad.",
   source: "Donald Trump",
+  citation: "Dinner with Ivanka",
+  year: "1992",
   tag: 'dumb'},
   {quote: "We are all born ignorant, but one must work hard to remain stupid.",
   source: "Benjamin Franklin",
+  citation: "WuTang Forever",
+  year: "1999",
   tag: 'truth'},
   {quote: "Tears come from the heart and not from the brain.",
   source: "Leonardo da Vinci",
+  citation: "Cellphone Conversations",
+  year: "1497?",
   tag: 'wisdom'},
   {quote: "Everyone has a plan 'till they get punched in the mouth.",
   source: "Mike Tyson",
+  citation: "Sesame Street",
+  year: "1987",
   tag: 'truth'},
   {quote: "Difficult times often bring out the best in people.",
   source: "Bernie Sanders",
+  citation: "Being Bodacious with Bernie",
+  year: "1984",
   tag: 'politics'},
   {quote: "What I like to drink most is wine that belongs to others.",
   source: "Diogenes",
+  citation: "Facebook",
+  year: "1647 B.C.",
   tag: 'humor'},
   {quote: "But man is not made for defeat. A man can be destroyed but not defeated.",
   source: "Ernest Hemingway",
+  citation: "Who really knows",
+  year: "1925",
   tag: 'motivational'},
   {quote: "When you reach the end of your rope, tie a knot in it and hang on.",
   source: "Franklin D. Roosevelt",
+  citation: "Presidential Sayings",
+  year: "1936",
   tag: 'motivational'},
   {quote: "The only journey is the one within.",
   source: "Rainer Maria Rilke",
+  citation: "something something",
+  year: "1973",
   tag: 'introspective'},
   {quote: "The supreme art of war is to subdue the enemy without fighting.",
   source: "Sun Tzu",
+  citation: "The Art of War",
+  year: "long ass time ago",
   tag: 'warfare'}
 ];
 
@@ -71,7 +93,7 @@ function getRandomQuote() {
 //Function to build quote and HTML.
 function printQuote() {
     var selection = getRandomQuote();
-    var buildHTML = '<p class="quote">' + selection.quote + '</p> <p class="source">' + selection.source + '</p>'
+    var buildHTML = '<p class="quote">' + selection.quote + '</p> <p class="source">' + selection.source + '<span class="citation">' + selection.citation + '</span> <span class="year">' + selection.year + '</span></p>'
     document.getElementById('quote-box').innerHTML =  buildHTML;
   }
 
