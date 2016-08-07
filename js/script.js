@@ -93,8 +93,17 @@ function getRandomQuote() {
 //Function to build quote and HTML.
 function printQuote() {
     var selection = getRandomQuote();
-    var buildHTML = '<p class="quote">' + selection.quote + '</p> <p class="source">' + selection.source + '<span class="citation">' + selection.citation + '</span> <span class="year">' + selection.year + '</span></p>'
-    document.getElementById('quote-box').innerHTML =  buildHTML;
+    var buildHTML = '<p class="quote">' + selection.quote + '</p> <p class="source">' + selection.source;
+      if (selection.citation !== undefined) {
+        buildHTML += '<span class = "citation">' + selection.citation + '</span>';
+      }
+      if (selection.year !== undefined) {
+        buildHTML += '<span class = "year">' + selection.year + '</span>';
+      }
+      if (selection.tag !== undefined) {
+        buildHTML += '<span class = "tag">' + selection.tag + '</span>'
+      }
+    document.getElementById('quote-box').innerHTML =  buildHTML + '</p>';
   }
 
 //function to generate Random background color.
