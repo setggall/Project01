@@ -101,7 +101,7 @@ function printQuote() {
         buildHTML += '<span class = "year">' + selection.year + '</span>';
       }
       if (selection.tag !== undefined) {
-        buildHTML += '<span class = "tag">' + selection.tag + '</span>'
+        buildHTML += '<span class = "tag">' + selection.tag + '</span>';
       }
     document.getElementById('quote-box').innerHTML =  buildHTML + '</p>';
   }
